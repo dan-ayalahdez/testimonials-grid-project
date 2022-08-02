@@ -1,0 +1,193 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+/* General */
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    height: 300vh;
+    background-color: hsl(210, 46%, 95%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+main {
+    padding: 1.5rem;
+}
+
+article {
+    padding: 1.5rem 1.5rem;
+    border-radius: 0.5rem;
+}
+
+article h3 {
+    padding: 1rem 0;
+}
+/* Main */
+
+.top-section, .bot-section, .right-section{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.top-section, .bot-section{
+    padding-bottom: 2rem;
+}
+
+
+.profile-container{
+    display: flex;
+    align-items: center;
+}
+
+.name-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    padding-left: 1rem;
+}
+
+
+.profile-picture{
+    width: 12%;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 0.9em;
+}
+
+.title {
+    font-size: 0.75em;
+    font-weight: 600;
+}
+
+.comment {
+    font-size: 1.3em;
+}
+
+.quote {
+    font-size: 0.85em;
+    line-height: 1.3rem;
+}
+
+/* Daniel */
+.daniel-container{
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: hsl(263, 55%, 52%);
+    background-position: top left 90% ;
+}
+
+.daniel-container .profile-picture {
+    border: 2px solid hsl(0, 0%, 81%);
+}
+
+.daniel-container .name , .daniel-container .comment {
+    color: hsl(210, 46%, 95%);
+}
+
+.daniel-container .title , .daniel-container .quote {
+    color: hsl(0, 0%, 81%);
+}
+
+/* Jonathan */
+
+.jona-container{
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+}
+
+.jona-container .title, .jona-container .quote{
+    color: hsl(0, 0%, 81%);
+}
+
+/* Jeanette & Kira*/
+
+.jean-container, .kira-container {
+    background-color: white;
+}
+
+.jean-container .name , .jean-container .comment, .kira-container .name , .kira-container .comment {
+    color: hsl(0, 0%, 49%);
+}
+
+.jean-container .title, .jean-container .quote, .jean-container .title ,.kira-container .quote{
+    color: hsl(0, 0%, 76%);
+}
+
+/* Patrick */
+
+.patrick-container{
+    background-color: hsl(219, 29%, 14%);
+}
+
+.patrick-container .name, .patrick-container .comment {
+    color: white;
+}
+
+.patrick-container .title, .patrick-container .quote {
+    color: hsl(0, 0%, 49%);
+}
+
+.patrick-container .profile-picture {
+    border: 2px hsl(263, 55%, 52%) solid;
+}
+
+/* Footer */
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: saddlebrown;
+    position: absolute;
+    bottom: 1%;
+    left: 0%;
+    right: 0%; 
+}
+.attribution a { 
+    color: limegreen;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 1280px){
+    body {
+        height: 100vh;
+    }
+
+    main {
+        padding: 8rem;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .left-section{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .top-section {
+        grid-template-columns: 2.8fr 1.2fr;
+        gap: 1.5rem;
+        padding-bottom: 0rem;
+    }
+
+    .bot-section {
+        grid-template-columns: 1.2fr 2.8fr;
+        padding-bottom: 0rem;
+    }
+
+    .daniel-container .profile-picture, .patrick-container .profile-picture{
+        width: 5%;
+    }
+
+}
